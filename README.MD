@@ -7,8 +7,8 @@
 ```
 //Methods
 public static ToBase64(str:string):string
-public static ToBase64(str:string):string
-public static ToBase64(str:string):string
+public static FromBase64(str:string):string
+public static EncodeURI(str:string):string
 
 //Usage
 const _toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
