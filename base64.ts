@@ -86,15 +86,15 @@ export class TsBase64 {
 		].join('|'), 'g');
 	}
 
-	private static _atob(a): string {
+	private static _atob(a:string): string {
 		return a.replace(/[\s\S]{1,4}/g, this._cb_decode);
 	}
 
-	private static _btoa(b) {
+	private static _btoa(b:string) {
 		return b.replace(/[\s\S]{1,3}/g, this._cb_encode);
 	}
 
-	private static _btou(b): string {
+	private static _btou(b:any): string {
 		return b.replace(this._re_btou, this._cb_btou);
 	}
 
@@ -133,7 +133,7 @@ export class TsBase64 {
 		return this._encode(u);
 	}
 
-	private static _utob(u): string {
+	private static _utob(u:string): string {
 		return u.replace(this._re_utob, this._cb_utob);
 	}
 
@@ -145,7 +145,6 @@ export class TsBase64 {
 		}
 	}
 }
-
 //Usage
 const _toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
 const _fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA=="); // Typescript
