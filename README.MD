@@ -1,6 +1,6 @@
 # TsBase64 Encode & Decode
 
-> Simply download or copy or paste this class into your project
+> Simply download or copy/paste this class into your project
 
 ```
 //Methods
