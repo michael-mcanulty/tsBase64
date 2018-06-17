@@ -147,6 +147,10 @@ export class TsBase64 {
 }
 
 //Usage
-const encoded = TsBase64.encode("Typescript", true); // VHlwZXNjcmlwdA==
-const encoded = TsBase64.decode("VHlwZXNjcmlwdA=="); // Typescript
-TsBase64.toBase64("Typescript", true);
+const _encoded = TsBase64.encode("Typescript", true);//VHlwZXNjcmlwdA"  ( urlencoded removes the '==' )
+const _decoded = TsBase64.decode("VHlwZXNjcmlwdA");
+const _toB64Encoded = TsBase64.toBase64("Typescript", false); // false removes the '=='
+
+console.log(_encoded); // VHlwZXNjcmlwdA==
+console.log(_decoded); // Typescript
+console.log(_toB64Encoded); // VHlwZXNjcmlwdA==
