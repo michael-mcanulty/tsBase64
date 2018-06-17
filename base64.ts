@@ -1,3 +1,4 @@
+
 export class TsBase64 {
 	private static _b64chars: string = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`;
 	private static _b64tab: any;
