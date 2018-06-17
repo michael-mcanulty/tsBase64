@@ -5,18 +5,21 @@
 
 
 ```
-//URL safe result is option. Defaults to false.
-TsBase64.encode(encodeStr:string, urlSafeResult?:boolean): string
-TsBase64.decode(decodeStr:string): string
-TsBase64.toBase64(yourStr:string, urlSafeResult?:boolean): string
+//Methods
+public static ToBase64(str:string):string
+public static ToBase64(str:string):string
+public static ToBase64(str:string):string
 
-//USAGE
-const _encoded = TsBase64.encode("Typescript", true);
-const _decoded = TsBase64.decode("VHlwZXNjcmlwdA");
-const _toB64Encoded = TsBase64.toBase64("Typescript");
+//Usage
+const _toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
+const _fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA=="); // Typescript
+const _uriEncodedB64 = TsBase64.EncodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
 
-//RESULT
-console.log(_encoded); // VHlwZXNjcmlwdA==
-console.log(_decoded); // Typescript
-console.log(_toB64Encoded); // VHlwZXNjcmlwdA==
+// Non-URI encoded, Base64 string.
+console.log(_toB64); // VHlwZXNjcmlwdA==
+console.log(_fromB64); // Typescript.
+//Removes the special characters ('==').
+console.log(_uriEncodedB64); // VHlwZXNjcmlwdA==
+
+
 
