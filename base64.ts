@@ -110,7 +110,7 @@ export class TsBase64 {
 		);
 	}
 
-	public static encode(u: string, urisafe: boolean): string {
+	public static encode(u: string, urisafe: boolean = false): string {
 		let _encode = (u) => {
 			return this.btoa(this.utob(u))
 		};
@@ -149,7 +149,7 @@ export class TsBase64 {
 //Usage
 const _encoded = TsBase64.encode("Typescript", true);//VHlwZXNjcmlwdA"  ( urlencoded removes the '==' )
 const _decoded = TsBase64.decode("VHlwZXNjcmlwdA");
-const _toB64Encoded = TsBase64.toBase64("Typescript", false); // false removes the '=='
+const _toB64Encoded = TsBase64.toBase64("Typescript"); // false removes the '=='
 
 console.log(_encoded); // VHlwZXNjcmlwdA==
 console.log(_decoded); // Typescript
