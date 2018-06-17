@@ -5,9 +5,10 @@
 
 
 ```
-TsBase64.encode(encodeMe:string, urlSafe:boolean): string
-TsBase64.decode(encodeMe:string): string
-TsBase64.toBase64(encodeMe:string, urlSafe:boolean): string
+//URL safe result is option. Defaults to false.
+TsBase64.encode(encodeStr:string, urlSafeResult?:boolean): string
+TsBase64.decode(decodeStr:string): string
+TsBase64.toBase64(yourStr:string, urlSafeResult?:boolean): string
 
 //USAGE
 const _encoded = TsBase64.encode("Typescript", true);
