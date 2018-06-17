@@ -147,6 +147,6 @@ export class TsBase64 {
 }
 
 //Usage
-const encoded = TsBase64.encode('dankogai', true); // VHlwZXNjcmlwdA==
+const encoded = TsBase64.encode("Typescript", true); // VHlwZXNjcmlwdA==
 const encoded = TsBase64.decode("VHlwZXNjcmlwdA=="); // Typescript
 TsBase64.toBase64("Typescript", true);
