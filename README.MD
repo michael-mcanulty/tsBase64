@@ -13,7 +13,7 @@ TsBase64.toBase64(yourStr:string, urlSafeResult?:boolean): string
 //USAGE
 const _encoded = TsBase64.encode("Typescript", true);
 const _decoded = TsBase64.decode("VHlwZXNjcmlwdA");
-const _toB64Encoded = TsBase64.toBase64("Typescript", false);
+const _toB64Encoded = TsBase64.toBase64("Typescript");
 
 //RESULT
 console.log(_encoded); // VHlwZXNjcmlwdA==
