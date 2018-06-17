@@ -1,5 +1,5 @@
 # Base64 Typescript class
-## Just download or copy / pste the class into your project.
+## Simply download or copy or paste this class into your project
 
 > Base64 encoding / decoding Typescript class. 
 
