@@ -3,4 +3,4 @@
 
 > Base64 encoding / decoding Typescript class. 
 
-### Includes an option to create URL encoded strings that remove special characters i.e the trailing '=='
+Includes an option to create URL encoded strings that remove special characters i.e the trailing '=='
