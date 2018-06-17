@@ -29,7 +29,7 @@ export class TsBase64 {
 		}
 	}
 
-	private static _cb_decode(cccc): string {
+	private static _cb_decode(cccc:string): string {
 		let len = cccc.length,
 			padlen = len % 4,
 			n = (len > 0 ? this._b64tab[cccc.charAt(0)] << 18 : 0)
@@ -91,7 +91,7 @@ export class TsBase64 {
 		return a.replace(/[\s\S]{1,4}/g, this._cb_decode);
 	}
 
-	private static _btoa(b:string) {
+	private static _btoa(b:string) :string{
 		return b.replace(/[\s\S]{1,3}/g, this._cb_encode);
 	}
 
@@ -146,6 +146,7 @@ export class TsBase64 {
 		}
 	}
 }
+
 //Usage
 const _toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
 const _fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA=="); // Typescript
