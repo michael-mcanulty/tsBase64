@@ -86,21 +86,21 @@ export class TsBase64 {
 		].join('|'), 'g');
 	}
 
-	public static atob(a): string {
+	private static _atob(a): string {
 		return a.replace(/[\s\S]{1,4}/g, this._cb_decode);
 	}
 
-	public static btoa(b) {
+	private static _btoa(b) {
 		return b.replace(/[\s\S]{1,3}/g, this._cb_encode);
 	}
 
-	public static btou(b): string {
+	private static _btou(b): string {
 		return b.replace(this._re_btou, this._cb_btou);
 	}
 
-	public static decode(a: string): string {
+	private static _decode(a: string): string {
 		let _decode = (a) => {
-			return this.btou(atob(a))
+			return this._btou(atob(a))
 		};
 		return _decode(
 			String(a).replace(/[-_]/g, (m0) => {
@@ -110,9 +110,9 @@ export class TsBase64 {
 		);
 	}
 
-	public static encode(u: string, urisafe: boolean = false): string {
+	private static _encode(u: string, urisafe: boolean = false): string {
 		let _encode = (u) => {
-			return this.btoa(this.utob(u))
+			return this._btoa(this._utob(u))
 		};
 		return !urisafe
 			? _encode(String(u))
@@ -122,18 +122,18 @@ export class TsBase64 {
 	}
 
 	public static encodeURI(u): string {
-		return this.encode(u, true);
+		return this._encode(u, true);
 	}
 
 	public static fromBase64(c: string): string {
-		return this.decode(c);
+		return this._decode(c);
 	}
 
-	public static toBase64(u: string, urisafe: boolean): string {
-		return this.encode(u, urisafe);
+	public static toBase64(u: string): string {
+		return this._encode(u);
 	}
 
-	public static utob(u): string {
+	private static _utob(u): string {
 		return u.replace(this._re_utob, this._cb_utob);
 	}
 
@@ -147,10 +147,14 @@ export class TsBase64 {
 }
 
 //Usage
-const _encoded = TsBase64.encode("Typescript", true);//VHlwZXNjcmlwdA"  ( urlencoded removes the '==' )
-const _decoded = TsBase64.decode("VHlwZXNjcmlwdA");
-const _toB64Encoded = TsBase64.toBase64("Typescript"); // false removes the '=='
+const _toB64 = TsBase64.toBase64("Typescript"); // Non-URI encoded, Base64 string.
+const _fromB64 = TsBase64.fromBase64("VHlwZXNjcmlwdA=="); // Typescript
+const _uriEncodedB64 = TsBase64.encodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
 
-console.log(_encoded); // VHlwZXNjcmlwdA==
-console.log(_decoded); // Typescript
-console.log(_toB64Encoded); // VHlwZXNjcmlwdA==
+// Non-URI encoded, Base64 string.
+console.log(_toB64); // VHlwZXNjcmlwdA==
+
+console.log(_fromB64); // Typescript.
+
+//Removes the special characters ('==').
+console.log(_uriEncodedB64); // VHlwZXNjcmlwdA==
