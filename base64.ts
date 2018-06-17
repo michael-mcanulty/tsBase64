@@ -121,15 +121,15 @@ export class TsBase64 {
 			}).replace(/=/g, '');
 	}
 
-	public static encodeURI(u): string {
+	public static EncodeURI(u): string {
 		return this._encode(u, true);
 	}
 
-	public static fromBase64(c: string): string {
+	public static FromBase64(c: string): string {
 		return this._decode(c);
 	}
 
-	public static toBase64(u: string): string {
+	public static ToBase64(u: string): string {
 		return this._encode(u);
 	}
 
@@ -147,9 +147,9 @@ export class TsBase64 {
 }
 
 //Usage
-const _toB64 = TsBase64.toBase64("Typescript"); // Non-URI encoded, Base64 string.
-const _fromB64 = TsBase64.fromBase64("VHlwZXNjcmlwdA=="); // Typescript
-const _uriEncodedB64 = TsBase64.encodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
+const _toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
+const _fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA=="); // Typescript
+const _uriEncodedB64 = TsBase64.EncodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
 
 // Non-URI encoded, Base64 string.
 console.log(_toB64); // VHlwZXNjcmlwdA==
