@@ -1,8 +1,6 @@
 # TsBase64 Encode & Decode
-## Typescript class | Simply download or copy or paste this class into your project
 
-> Base64 encoding / decoding Typescript class. 
-
+> Simply download or copy or paste this class into your project
 
 ```
 //Methods
