@@ -1,4 +1,4 @@
-# Base64 Typescript class. Encode & Decode. Includes uriEncoding
+# Base64 Typescript class. Encode & Decode
 ## Simply download or copy or paste this class into your project
 
 > Base64 encoding / decoding Typescript class. 
