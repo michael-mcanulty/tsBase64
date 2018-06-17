@@ -3,6 +3,7 @@
 
 > Base64 encoding / decoding Typescript class. 
 
+
 ```
 TsBase64.encode(encodeMe:string, urlSafe:boolean): string
 TsBase64.decode(encodeMe:string): string
