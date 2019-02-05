@@ -122,10 +122,4 @@ TsBase64._b64chars = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345
 TsBase64._fromCharCode = String.fromCharCode;
 TsBase64._re_utob = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g;
 exports.TsBase64 = TsBase64;
-const _toB64 = TsBase64.ToBase64("Typescript");
-const _fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA==");
-const _uriEncodedB64 = TsBase64.EncodeURI("Typescript\"");
-console.log(_toB64);
-console.log(_fromB64);
-console.log(_uriEncodedB64);
 //# sourceMappingURL=index.js.map
