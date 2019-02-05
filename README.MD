@@ -2,7 +2,7 @@
 
 > Simply download or copy/paste this class into your project
 
-##Or you can use NPM
+#Or you can use NPM
 
 >npm i ts-base-64
 
