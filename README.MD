@@ -2,7 +2,8 @@
 
 > Simply download or copy/paste this class into your project
 
-> npm i ts-base-64
+> Or, use NPM
+npm i ts-base-64
 
 ```
 //Methods
