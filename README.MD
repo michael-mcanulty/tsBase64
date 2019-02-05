@@ -1,6 +1,8 @@
 # TsBase64 Encode & Decode
 
 > Simply download or copy/paste this class into your project
+> or
+> npm i ts-base-64
 
 ```
 //Methods
