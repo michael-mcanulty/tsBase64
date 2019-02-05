@@ -2,8 +2,9 @@
 
 > Simply download or copy/paste this class into your project
 
-> Or, use NPM
-npm i ts-base-64
+##Or you can use NPM
+
+>npm i ts-base-64
 
 ```
 //Methods
