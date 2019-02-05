@@ -6,6 +6,11 @@
 
 >npm i ts-base-64
 
+Import
+```
+import {ToBase64} from "ts-base-64";
+```
+
 Static Methods:
 ```
 ToBase64(strObj: string|object|number): string
