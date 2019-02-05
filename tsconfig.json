@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "inlineSources": true,
+    "outDir": "dist",
+    "baseUrl": "src",
+    "module": "commonjs",
+    "target": "es2017",
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "removeComments": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
