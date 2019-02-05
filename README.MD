@@ -4,7 +4,7 @@
 
 #Or you can use NPM
 
->npm i ts-b
+>npm i ts-base-64
 
 Static Methods:
 ```
