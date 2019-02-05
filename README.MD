@@ -6,11 +6,11 @@
 
 >npm i ts-b
 
-Methods:
+Static Methods:
 ```
-public static ToBase64(strObj: string|object|number): string
-public static FromBase64(str:string):string
-public static EncodeURI(str:string):string
+ToBase64(strObj: string|object|number): string
+FromBase64(str:string):string
+EncodeURI(str:string):string
 ```
 Usage:
 ```
