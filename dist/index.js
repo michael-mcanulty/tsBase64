@@ -108,11 +108,21 @@ class TsBase64 {
     static EncodeURI(u) {
         return this._encode(u, true);
     }
-    static FromBase64(c) {
+    static Decode(c) {
         return this._decode(c);
     }
-    static ToBase64(u) {
-        return this._encode(u);
+    static Encode(strObj) {
+        let val;
+        if (typeof strObj === "string") {
+            val = strObj;
+        }
+        else if (typeof strObj === "number") {
+            val = strObj.toString();
+        }
+        else if (typeof strObj === "object") {
+            val = JSON.stringify(strObj);
+        }
+        return (val) ? this._encode(val) : "";
     }
     static _utob(u) {
         return u.replace(this._re_utob, this._cb_utob);

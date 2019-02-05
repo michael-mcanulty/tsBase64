@@ -125,12 +125,20 @@ export class TsBase64 {
 		return this._encode(u, true);
 	}
 
-	public static FromBase64(c: string): string {
+	public static Decode(c: string): string {
 		return this._decode(c);
 	}
 
-	public static ToBase64(u: string): string {
-		return this._encode(u);
+	public static Encode(strObj: string|object|number): string {
+		let val: string;
+		if(typeof strObj === "string"){
+			val = strObj;
+		}else if(typeof strObj === "number"){
+			val = strObj.toString();
+		}else if(typeof strObj === "object"){
+			val = JSON.stringify(strObj);
+		}
+		return (val)?this._encode(val):"";
 	}
 
 	private static _utob(u:string): string {

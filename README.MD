@@ -4,14 +4,14 @@
 
 ```
 //Methods
-public static ToBase64(str:string):string
+public static ToBase64(strObj: string|object|number): string
 public static FromBase64(str:string):string
 public static EncodeURI(str:string):string
 
 //Usage
-const toB64 = TsBase64.ToBase64("Typescript"); // Non-URI encoded, Base64 string.
-const fromB64 = TsBase64.FromBase64("VHlwZXNjcmlwdA=="); // Typescript
-const uriEncodedB64 = TsBase64.EncodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
+let toB64: string = TsBase64.Encode("Typescript"); // Non-URI encoded, Base64 string.
+let fromB64: string = TsBase64.Decode("VHlwZXNjcmlwdA=="); // Typescript
+let uriEncodedB64: string = TsBase64.EncodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
 
 // Non-URI encoded, Base64 string.
 console.log(toB64); // VHlwZXNjcmlwdA==
