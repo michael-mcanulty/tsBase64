@@ -19,7 +19,8 @@ EncodeURI(str:string):string
 ```
 Usage:
 ```
-TsBase64.Encode("Typescript"); // Non-URI encoded, Base64 string.
+TsBase64.Encode("Typescript"); // Non-URI encoded, Base64 string or object.
+TsBase64.Encode({test: 1234}); // object
 TsBase64.Decode("VHlwZXNjcmlwdA=="); // Typescript
 TsBase64.EncodeURI("Typescript\""); // "VHlwZXNjcmlwdA" (Removes the '==' chars)
 ```
